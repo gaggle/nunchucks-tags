@@ -1,6 +1,24 @@
 {
   "name": "nunjucks-tags",
   "version": "0.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "nyc mocha && npm run cov",
+    "cov": "nyc report --reporter=html"
+  },
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "es6-promisify": "^5.0.0",
+    "lodash.isboolean": "^3.0.3",
+    "lodash.isfunction": "^3.0.8",
+    "nunjucks": "^3.0.1",
+    "strip-indent": "^2.0.0"
+  },
+  "devDependencies": {
+    "dom-compare": "^0.3.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "xmldom": "^0.1.27"
+  }
 }
