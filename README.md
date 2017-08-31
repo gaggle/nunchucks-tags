@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/gaggle/nunchucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunchucks-tags)
 [![codecov](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunchucks-tags)
 [![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunchucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunchucks-tags)
+[![Code Climate GPA](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 # Nunjucks tags
 Wrapper around Nunjucks to make it easy to add custom tags like this:
