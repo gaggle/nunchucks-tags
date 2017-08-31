@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/gaggle/nunchucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunchucks-tags)
+[![Coverage Status](https://coveralls.io/repos/github/gaggle/nunchucks-tags/badge.svg?branch=enable-travis)](https://coveralls.io/github/gaggle/nunchucks-tags?branch=enable-travis)
+[![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunchucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunchucks-tags)
+
 # Nunjucks tags
 Wrapper around Nunjucks to make it easy to add custom tags like this:
 
