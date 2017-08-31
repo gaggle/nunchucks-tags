@@ -18,7 +18,7 @@ nunjucks.render("{% tag Foo Bar %}")
 > Foo/Bar
 ```
 
-# Development
+## Development
 Just run `npm test` and make sure to add tests 
 ![Graph of coverage/commits](https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg)
 
