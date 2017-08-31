@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/gaggle/nunchucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunchucks-tags)
-[![codecov](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunchucks-tags)
-[![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunchucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunchucks-tags)
+[![Build Status](https://travis-ci.org/gaggle/nunjucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunjucks-tags)
+[![codecov](https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunjucks-tags)
+[![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunjucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunjucks-tags)
 [![Code Climate GPA](https://codeclimate.com/github/gaggle/nunjucks-tags/badges/gpa.svg)](https://codeclimate.com/github/gaggle/nunjucks-tags)
 
 # Nunjucks tags
@@ -20,7 +20,7 @@ nunjucks.render("{% tag Foo Bar %}")
 
 # Development
 Just run `npm test` and make sure to add tests 
-![Graph of coverage/commits](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graphs/commits.svg)
+![Graph of coverage/commits](https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg)
 
 ## Credits
 Lifted from the excellent [Hexo] project by [Tommy Chen].
