@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/gaggle/nunchucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunchucks-tags)
-[![Coverage Status](https://coveralls.io/repos/github/gaggle/nunchucks-tags/badge.svg?branch=enable-travis)](https://coveralls.io/github/gaggle/nunchucks-tags?branch=enable-travis)
+[![codecov](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunchucks-tags)
 [![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunchucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunchucks-tags)
 
 # Nunjucks tags
