@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/gaggle/nunchucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunchucks-tags)
-[![Coverage Status](https://coveralls.io/repos/github/gaggle/nunchucks-tags/badge.svg?branch=enable-travis)](https://coveralls.io/github/gaggle/nunchucks-tags?branch=enable-travis)
+[![codecov](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunchucks-tags)
 [![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunchucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunchucks-tags)
 
 # Nunjucks tags
@@ -16,6 +16,10 @@ nunjucks.render("{% tag Foo Bar %}")
   .then(res => console.log(res))
 > Foo/Bar
 ```
+
+# Development
+Just run `npm test` and make sure to add tests 
+![Graph of coverage/commits](https://codecov.io/gh/gaggle/nunchucks-tags/branch/master/graphs/commits.svg)
 
 ## Credits
 Lifted from the excellent [Hexo] project by [Tommy Chen].
