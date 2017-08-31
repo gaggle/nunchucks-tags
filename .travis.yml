@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
+script:
+  - npm run test:ci
+cache:
+  directories:
+    - "node_modules"
