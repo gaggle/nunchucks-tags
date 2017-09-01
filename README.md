@@ -3,8 +3,8 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunjucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunjucks-tags)
 [![Code Climate GPA](https://codeclimate.com/github/gaggle/nunjucks-tags/badges/gpa.svg)](https://codeclimate.com/github/gaggle/nunjucks-tags)
 
-# Nunjucks tags
-Wrapper around Nunjucks to make it easy to add custom tags.
+# Nunjucks Tags
+Wrapper around [Nunjucks] to make it easy to add custom tags.
 
 ## How to use
 Custom tags are functions that takes a Nunjucks block 
@@ -41,7 +41,8 @@ $ npm install https://github.com/gaggle/nunjucks-tags --save
 ## Credits
 Lifted from the excellent [Hexo] project by [Tommy Chen].
 
-[Hexo]: https://hexo.io
-[Tommy Chen]: https://github.com/tommy351
 [Graph of coverage/commits]: https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg
+[Hexo]: https://hexo.io
 [nunjucks-tags-typography]: https://github.com/gaggle/nunjucks-tags-typography
+[Nunjucks]: https://github.com/mozilla/nunjucks
+[Tommy Chen]: https://github.com/tommy351
