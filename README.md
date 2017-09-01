@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gaggle/nunjucks-tags.svg?branch=enable-travis)](https://travis-ci.org/gaggle/nunjucks-tags)
+[![Build Status](https://travis-ci.org/gaggle/nunjucks-tags.svg?branch=master)](https://travis-ci.org/gaggle/nunjucks-tags)
 [![codecov](https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/gaggle/nunjucks-tags)
 [![Known Vulnerabilities](https://snyk.io/test/github/gaggle/nunjucks-tags/badge.svg)](https://snyk.io/test/github/gaggle/nunjucks-tags)
 [![Code Climate GPA](https://codeclimate.com/github/gaggle/nunjucks-tags/badges/gpa.svg)](https://codeclimate.com/github/gaggle/nunjucks-tags)
