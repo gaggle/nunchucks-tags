@@ -18,6 +18,9 @@ nunjucks.render("{% tag Foo Bar %}")
 > Foo/Bar
 ```
 
+## Custom tag packs
+* [nunjucks-tags-typography]  
+
 ## Development
 Just run `npm test` and make sure to add tests 
 ![Graph of coverage/commits]
@@ -28,3 +31,4 @@ Lifted from the excellent [Hexo] project by [Tommy Chen].
 [Hexo]: https://hexo.io
 [Tommy Chen]: https://github.com/tommy351
 [Graph of coverage/commits]: https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg
+[nunjucks-tags-typography]: https://github.com/gaggle/nunjucks-tags-typography
