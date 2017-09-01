@@ -20,10 +20,11 @@ nunjucks.render("{% tag Foo Bar %}")
 
 ## Development
 Just run `npm test` and make sure to add tests 
-![Graph of coverage/commits](https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg)
+![Graph of coverage/commits]
 
 ## Credits
 Lifted from the excellent [Hexo] project by [Tommy Chen].
 
 [Hexo]: https://hexo.io
 [Tommy Chen]: https://github.com/tommy351
+[Graph of coverage/commits]: https://codecov.io/gh/gaggle/nunjucks-tags/branch/master/graphs/commits.svg
