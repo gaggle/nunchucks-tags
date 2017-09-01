@@ -4,8 +4,14 @@
 [![Code Climate GPA](https://codeclimate.com/github/gaggle/nunjucks-tags/badges/gpa.svg)](https://codeclimate.com/github/gaggle/nunjucks-tags)
 
 # Nunjucks tags
-Wrapper around Nunjucks to make it easy to add custom tags like this:
+Wrapper around Nunjucks to make it easy to add custom tags.
 
+## How to use
+Custom tags are functions that takes a Nunjucks block 
+and returns a rendered string.
+
+Here we register a custom tag `tag` 
+that just joins its arguments as with slash separator: 
 ```javascript
 const NunjucksTags = require("nunjucks-tags")
 
@@ -18,11 +24,18 @@ nunjucks.render("{% tag Foo Bar %}")
 > Foo/Bar
 ```
 
+With this you can return rich HTML structures based on simple block-input.
+
+
+To install:
+```bash
+$ npm install https://github.com/gaggle/nunjucks-tags --save
+```
+
 ## Custom tag packs
 * [nunjucks-tags-typography]  
 
 ## Development
-Just run `npm test` and make sure to add tests 
 ![Graph of coverage/commits]
 
 ## Credits
