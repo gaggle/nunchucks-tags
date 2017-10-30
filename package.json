@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run _test && nyc report --reporter=html",
-    "test:ci": "npm run _test && nyc report --reporter=lcov > coverage.lcov && codecov",
-    "_test": "nyc --all mocha"
+    "lint:fix": "standard --fix",
+    "test": "npm run test:mocha && standard",
+    "test:ci": "npm run test:mocha && nyc report --reporter=lcov > coverage.lcov && codecov",
+    "test:mocha": "nyc --all mocha && nyc report --reporter=html"
   },
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "codecov": "^2.3.0",
     "mocha": "^3.5.0",
-    "nyc": "^11.1.0"
+    "nyc": "^11.1.0",
+    "standard": "^10.0.3"
   }
 }
