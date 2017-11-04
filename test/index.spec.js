@@ -29,6 +29,12 @@ describe('nunjucks-tags', function () {
       return tag.render('{% tag Foo %}Bar{% endtag %}')
         .then(result => assert.equal(result, 'Foo'))
     })
+
+    it('throws on preserve content without ends', function () {
+      assert.throws(() => {
+        tag.register('tag', () => '', {ends: false, preserveContent: true})
+      }, Error)
+    })
   })
 
   describe('#render', function () {
@@ -48,10 +54,6 @@ describe('nunjucks-tags', function () {
         .then(result => assert.equal(result, 'foo:bar {{ user }}'))
     })
 
-    it('cannot preserve content without ends', function () {
-      assert.throws(() => {
-        tag.register('code', () => '', {ends: false, preserveContent: true})
-      }, Error)
     })
   })
 
