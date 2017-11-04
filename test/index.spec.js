@@ -54,6 +54,14 @@ describe('nunjucks-tags', function () {
         .then(result => assert.equal(result, 'foo:bar {{ user }}'))
     })
 
+    it('preserves content across multiple lines', function () {
+      tag.register('wrap', (args, content) => content.split('\n').map(e => `<p>${e}</p>`).join('\n'), {
+        ends: true,
+        preserveContent: true
+      })
+
+      return tag.render('{% wrap %}a\n  b{% endwrap %}')
+        .then(result => assert.equal(result, '<p>a</p>\n<p>  b</p>'))
     })
   })
 
