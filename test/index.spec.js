@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach */
 'use strict'
 const assert = require('assert')
+const stripIndent = require('strip-indent')
 
 const Nunjucks = require('..')
 
@@ -55,12 +56,17 @@ describe('nunjucks-tags', function () {
     })
 
     it('preserves content across multiple lines', function () {
-      tag.register('wrap', (args, content) => content.split('\n').map(e => `<p>${e}</p>`).join('\n'), {
+      tag.register('wrap', (args, content) => {
+        return stripIndent(content)
+          .split('\n')
+          .map(e => `<p>${e}</p>`)
+          .join('\n')
+      }, {
         ends: true,
         preserveContent: true
       })
 
-      return tag.render('{% wrap %}a\n  b{% endwrap %}')
+      return tag.render('{% wrap %}  a\n    b{% endwrap %}')
         .then(result => assert.equal(result, '<p>a</p>\n<p>  b</p>'))
     })
   })
