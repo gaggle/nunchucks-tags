@@ -37,15 +37,21 @@ describe('nunjucks-tags', function () {
         .then(result => assert.equal(result, 'Foo'))
     })
 
-    it('does not process placeholder-matching content', function () {
-      tag.register('code', args => args.join(''), {
+    it('can preserve content', function () {
+      tag.register('code', (args, content) => `${args.join('')} ${content}`, {
         ends: true,
-        placeholder: /{% code.*%}[\s\S]*?{% endcode %}/gm
+        preserveContent: true
       })
 
-      const str = '{% code lang:json%}{{ user }}{% endcode %}'
+      const str = '{% code foo:bar %}{{ user }}{% endcode %}'
       return tag.render(str, {user: 'Foo'})
-        .then(result => assert.equal(result, str))
+        .then(result => assert.equal(result, 'foo:bar {{ user }}'))
+    })
+
+    it('cannot preserve content without ends', function () {
+      assert.throws(() => {
+        tag.register('code', () => '', {ends: false, preserveContent: true})
+      }, Error)
     })
   })
 
