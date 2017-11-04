@@ -69,6 +69,16 @@ describe('nunjucks-tags', function () {
       return tag.render('{% wrap %}\n  a\n    b{% endwrap %}')
         .then(result => assert.equal(result, '<p>a</p>\n<p>  b</p>'))
     })
+
+    it('passes raw string along via this', function () {
+      tag.register('tag', function () {
+        return this.rawString
+      })
+
+      let str = '{% tag %}'
+      return tag.render(str)
+        .then(result => assert.equal(result, str))
+    })
   })
 
   describe('custom tag', function () {
