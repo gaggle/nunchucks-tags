@@ -66,7 +66,7 @@ describe('nunjucks-tags', function () {
         preserveContent: true
       })
 
-      return tag.render('{% wrap %}  a\n    b{% endwrap %}')
+      return tag.render('{% wrap %}\n  a\n    b{% endwrap %}')
         .then(result => assert.equal(result, '<p>a</p>\n<p>  b</p>'))
     })
   })
