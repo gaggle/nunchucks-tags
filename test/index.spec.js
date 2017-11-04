@@ -50,9 +50,9 @@ describe('nunjucks-tags', function () {
         preserveContent: true
       })
 
-      const str = '{% code foo:bar %}{{ user }}{% endcode %}'
+      const str = '{% code foo:bar %}{{ user }} and {{ foo }}{% endcode %}'
       return tag.render(str, {user: 'Foo'})
-        .then(result => assert.equal(result, 'foo:bar {{ user }}'))
+        .then(result => assert.equal(result, 'foo:bar {{ user }} and {{ foo }}'))
     })
 
     it('preserves content across multiple lines', function () {
