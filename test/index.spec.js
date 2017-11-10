@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach */
 'use strict'
 const assert = require('assert')
+const stripIndent = require('strip-indent')
 
 const Nunjucks = require('..')
 
@@ -29,6 +30,12 @@ describe('nunjucks-tags', function () {
       return tag.render('{% tag Foo %}Bar{% endtag %}')
         .then(result => assert.equal(result, 'Foo'))
     })
+
+    it('throws on preserve content without ends', function () {
+      assert.throws(() => {
+        tag.register('tag', () => '', {ends: false, preserveContent: true})
+      }, Error)
+    })
   })
 
   describe('#render', function () {
@@ -37,9 +44,39 @@ describe('nunjucks-tags', function () {
         .then(result => assert.equal(result, 'Foo'))
     })
 
-    it('does not process <pre><code> content', function () {
-      let str = '<pre><code>{{ user }}</code></pre>'
+    it('can preserve content', function () {
+      tag.register('code', (args, content) => `${args.join('')} ${content}`, {
+        ends: true,
+        preserveContent: true
+      })
+
+      const str = '{% code foo:bar %}{{ user }} and {{ foo }}{% endcode %}'
       return tag.render(str, {user: 'Foo'})
+        .then(result => assert.equal(result, 'foo:bar {{ user }} and {{ foo }}'))
+    })
+
+    it('preserves content across multiple lines', function () {
+      tag.register('wrap', (args, content) => {
+        return stripIndent(content)
+          .split('\n')
+          .map(e => `<p>${e}</p>`)
+          .join('\n')
+      }, {
+        ends: true,
+        preserveContent: true
+      })
+
+      return tag.render('{% wrap %}\n  a\n    b{% endwrap %}')
+        .then(result => assert.equal(result, '<p>a</p>\n<p>  b</p>'))
+    })
+
+    it('passes raw string along via this', function () {
+      tag.register('tag', function () {
+        return this.rawString
+      })
+
+      let str = '{% tag %}'
+      return tag.render(str)
         .then(result => assert.equal(result, str))
     })
   })
